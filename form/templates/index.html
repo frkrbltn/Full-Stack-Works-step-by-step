@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express Example</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/forms.css">
+</head>
+
+<body>
+  <h1>Welcome to your server</h1>
+  <div class="container">
+    <h2>No action parameters</h2>
+    <!-- write get form method with submit-->
+    <form action="/formdata" method="get">
+        <h3>GET</h3>
+        <input type="text" name="input1">
+        <input type="submit">
+    </form>
+
+    <!-- write post form method with submit-->
+    <form action="/formdata" method="post">
+        <h3>POST</h3>
+        <input type="text" name="input1">
+        <input type="submit">
+    </form>
+
+    <form>
+      <h3>POST Multipart</h3>
+    </form>
+
+  </div>
+
+  
+    <div class="container">
+        <h2>With action parameters</h2>
+
+
+        <form method="get" action="/formdata?param1=value1&param2=value2">
+        <h3>GET</h3>
+
+        <input type="text" name="input1">
+        <input type="submit">
+        </form>
+
+        <form method="post" action="/formdata?param1=value1&param2=value2">
+        <h3>POST URL-encoded</h3>
+        <input type="text" name="input1">
+        <input type="submit">
+        </form>
+
+        <form method="post" enctype="multipart/form-data" action="/formdata?param1=value1&param2=value2">
+        <h3>POST Multipart</h3>
+        <input type="text" name="input1">
+        <br>
+        <input type="file" name="myfile">
+        <br>
+
+        
+        <input type="submit">
+    </form>
+    </div>
+</body>
+
+</html>

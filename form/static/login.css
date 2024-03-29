@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+form.login {
+    
+    box-shadow: 0px 5px 10px 0px black;
+}
+  
+form.login input {
+    display: block;
+    margin: 10px 0;
+}
