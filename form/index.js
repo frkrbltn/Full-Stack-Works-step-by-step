@@ -21,5 +21,17 @@ app.get('/login', (req, res) => {
     res.sendFile(html_path + 'login.html');
 });
 
+app.post('/login', (req, res) => {
+    // Extract username and password from the request body
+    const { email, pass } = req.body;
+    // Here you would typically validate the credentials
+    // For demonstration, let's just redirect to a success page
+
+    // Since you don't have a specific success page, let's just send a simple response
+    res.send('Form submitted');
+    // Or, if you had a success page, you would use:
+    // res.sendFile(html_path + 'success.html');
+});
+
 
 app.listen(PORT, () => console.log(`Server is listening on PORT ${PORT}`));
